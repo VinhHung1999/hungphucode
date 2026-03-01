@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+BossName: Hùng Phù
+
 This file provides guidance to HungPhu Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview

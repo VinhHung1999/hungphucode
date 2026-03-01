@@ -35,6 +35,26 @@ export const providers: ProviderConfig[] = [
       }),
   },
   {
+    name: "openrouter",
+    displayName: "OpenRouter",
+    models: [
+      {
+        label: "MiniMax M2.5",
+        model: "minimax/minimax-m2.5",
+        description: "MiniMax M2.5 via OpenRouter",
+        recommended: true,
+      },
+    ],
+    create: (model) =>
+      new ChatOpenAI({
+        model,
+        apiKey: process.env.OPENROUTER_API_KEY!,
+        configuration: {
+          baseURL: "https://openrouter.ai/api/v1",
+        },
+      }),
+  },
+  {
     name: "proxy",
     displayName: "DTA Proxy",
     models: [
